@@ -49,7 +49,8 @@ plot \
 	  "lum_t_c4_5548.csv" u (10**$1):2:(10**$3):(10**$4):5:6 every ::1 w xyerrorbars pt -1 lw 2 lc "light-pink" t "Peterson+05 NGC5548", \
 		(10**(1.06+0.61*log10(x/1e44))) w l lt -1 lw 3 notitle,\
     "ngc5548_lum_t_c4_old.csv" u ($1*c_c4):($2/86400) every ::1 w p pt 2 ps 2 lc 1 lw 3 title "{/Symbol Y}_{R} (old)", \
-    "ngc5548_lum_t_c4_old.csv" u ($1*c_c4):($3/86400) every ::1 w p pt 1 ps 2 lc 1 lw 3 title "{/Symbol Y}_{E} (old)"
+    "ngc5548_lum_t_c4_old.csv" u ($1*c_c4):($3/86400) every ::1 w p pt 1 ps 2 lc 1 lw 3 title "{/Symbol Y}_{E} (old)", \
+    "ngc5548_lum_t_c4_new.csv" u ($1*c_c4):($3/86400) every ::1 w p pt 1 ps 2 lc 2 lw 3 title "{/Symbol Y}_{E} (new)"
 
 set lmargin at screen 0.55
 set tmargin at screen 0.98
