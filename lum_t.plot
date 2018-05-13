@@ -48,10 +48,13 @@ plot \
 		"lum_t_c4_data.csv" u (10**$1):2:(10**$3):(10**$4):5:6 every ::1 w xyerrorbars pt -1 lw 2 lc "gray70" t "Peterson+05 data", \
 	  "lum_t_c4_5548.csv" u (10**$1):2:(10**$3):(10**$4):5:6 every ::1 w xyerrorbars pt -1 lw 2 lc "light-pink" t "Peterson+05 NGC5548", \
 		(10**(1.06+0.61*log10(x/1e44))) w l lt -1 lw 3 notitle,\
-    "ngc5548_lum_t_c4_old.csv" u ($1*c_c4):($2/86400) every ::1 w p pt 2 ps 2 lc 1 lw 3 title "{/Symbol Y}_{R} (old)", \
-    "ngc5548_lum_t_c4_old.csv" u ($1*c_c4):($3/86400) every ::1 w p pt 1 ps 2 lc 1 lw 3 title "{/Symbol Y}_{E} (old)", \
-    "ngc5548_lum_t_c4_new.csv" u ($1*c_c4):($3/86400) every ::1 w p pt 1 ps 2 lc 2 lw 3 title "{/Symbol Y}_{E} (new)", \
-    "ngc5548_lum_t_c4_new.csv" u ($1*c_c4):($2/86400) every ::1 w p pt 2 ps 2 lc 2 lw 3 title "{/Symbol Y}_{R} (new)"
+    "ngc5548_lum_t_c4_old.csv" u ($1*c_c4):($3/86400) every ::1 w p pt 1 ps 2 lc 1 lw 3 title "{/Symbol Y}_{E} (1x)", \
+    "ngc5548_lum_t_c4_old.csv" u ($1*c_c4):($2/86400) every ::1 w p pt 2 ps 2 lc 1 lw 3 title "{/Symbol Y}_{R} (1x)", \
+    "ngc5548_lum_t_c4_new.csv" u ($1*c_c4):($3/86400) every ::1 w p pt 1 ps 2 lc 2 lw 3 title "{/Symbol Y}_{E} (10x)", \
+    "ngc5548_lum_t_c4_new.csv" u ($1*c_c4):($2/86400) every ::1 w p pt 2 ps 2 lc 2 lw 3 title "{/Symbol Y}_{R} (10x)", \
+    "ngc5548_lum_t_c4_r30.csv" u ($1*c_c4):($3/86400) every ::1 w p pt 1 ps 2 lc 3 lw 3 title "{/Symbol Y}_{E} (30x)", \
+    "ngc5548_lum_t_c4_r30.csv" u ($1*c_c4):($2/86400) every ::1 w p pt 2 ps 2 lc 3 lw 3 title "{/Symbol Y}_{R} (30x)"
+
 
 
 set lmargin at screen 0.55
@@ -69,9 +72,11 @@ plot \
 		"lum_t_hb_data.csv" u (10**$1):2:(10**$3):(10**$4):5:6 every ::1 w xyerrorbars pt -1 lw 2 lc "gray70" t "Bentz+13 data", \
 		"lum_t_hb_5548.csv" u (10**$1):2:(10**$3):(10**$4):5:6 every ::1 w xyerrorbars pt -1 lw 2 lc "light-pink" t "Bentz+13 NGC5548", \
     (10**(1.559+log10(x/1e44)*0.549))   w l lt -1 lw 3 notitle, \
-    "ngc5548_lum_t_hb_old.csv" u ($1*c_hb):($2/86400) every ::1 w p pt 2 ps 2 lc 1 lw 3 title "{/Symbol Y}_{R} (old)", \
-    "ngc5548_lum_t_hb_old.csv" u ($1*c_hb):($3/86400) every ::1 w p pt 1 ps 2 lc 1 lw 3 title "{/Symbol Y}_{E} (old)", \
-    "ngc5548_lum_t_hb_new.csv" u ($1*c_hb):($3/86400) every ::1 w p pt 1 ps 2 lc 2 lw 3 title "{/Symbol Y}_{E} (new)", \
-    "ngc5548_lum_t_hb_new.csv" u ($1*c_hb):($2/86400) every ::1 w p pt 2 ps 2 lc 2 lw 3 title "{/Symbol Y}_{R} (new)"
+    "ngc5548_lum_t_hb_old.csv" u ($1*c_hb):($3/86400) every ::1 w p pt 1 ps 2 lc 1 lw 3 title "{/Symbol Y}_{E} (1x)", \
+    "ngc5548_lum_t_hb_old.csv" u ($1*c_hb):($2/86400) every ::1 w p pt 2 ps 2 lc 1 lw 3 title "{/Symbol Y}_{R} (1x)", \
+    "ngc5548_lum_t_hb_new.csv" u ($1*c_hb):($3/86400) every ::1 w p pt 1 ps 2 lc 2 lw 3 title "{/Symbol Y}_{E} (10x)", \
+    "ngc5548_lum_t_hb_new.csv" u ($1*c_hb):($2/86400) every ::1 w p pt 2 ps 2 lc 2 lw 3 title "{/Symbol Y}_{R} (10x)", \
+    "ngc5548_lum_t_hb_r30.csv" u ($1*c_hb):($3/86400) every ::1 w p pt 1 ps 2 lc 3 lw 3 title "{/Symbol Y}_{E} (30x)", \
+    "ngc5548_lum_t_hb_r30.csv" u ($1*c_hb):($2/86400) every ::1 w p pt 2 ps 2 lc 3 lw 3 title "{/Symbol Y}_{R} (30x)"
 
 unset multiplot
